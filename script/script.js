@@ -36,7 +36,7 @@
             }
             currentCredit -= callCost;
             credit.textContent = currentCredit;
-            alert(`📞 Calling ${subTitle} :${number}`);
+            alert(`📞 Calling ${subTitle} : ${number}`);
 
             noHistory.innerHTML = "";
             historyCreate(title, number, getTime());
