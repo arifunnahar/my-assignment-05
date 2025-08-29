@@ -79,5 +79,6 @@ stopPropagation() :
 
     1. Stops the event from "bubbling up" or "capturing down" the DOM tree.
     2. Stops the flow of the event. Handlers on parent elements will not be executed.
-    3. Stops a click on a nested element (like a button) from also triggering a click event on its parent container.
+    3. Stops a click on a nested element (like a button) from also triggering a click event 
+    on its parent container.
     4. The propagation of the event through the DOM.
