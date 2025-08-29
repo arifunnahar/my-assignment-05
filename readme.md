@@ -64,21 +64,12 @@ This technique is particularly effective for components like lists and tables an
 
 # Question No:5. What is the difference between **preventDefault() and stopPropagation()** methods?
 
-Ans: preventDefault() and stopPropagation() are two distinct JavaScript event methods used to control how events behave, but they target different aspects of the event's lifecycle. 
+Ans: The main difference is their purpose: preventDefault() stops the browser's default action for an event, while stopPropagation() halts the event from traveling further up or down the Document Object Model (DOM) tree. 
 
 
-Comparison of preventDefault() vs. stopPropagation():
+1: Using preventDefault()
+If the button were an <a> tag and event.preventDefault() was used, the link's default navigation would stop. However, the click event would still propagate to #parent-div, triggering its event handler.
 
-preventDefault() :
-	1. Prevents the browser's default action for a given event.
-    2. Does not stop the event from propagating to parent elements. Handlers on parent elements will still execute.
-    3. Prevents a <form> from submitting, a link (<a>) from navigating to its href, or a checkbox from being checked.
-    4. The action associated with the event.
 
-stopPropagation() :
-
-    1. Stops the event from "bubbling up" or "capturing down" the DOM tree.
-    2. Stops the flow of the event. Handlers on parent elements will not be executed.
-    3. Stops a click on a nested element (like a button) from also triggering a click event 
-    on its parent container.
-    4. The propagation of the event through the DOM.
+2: Using stopPropagation()
+If event.stopPropagation() is called in the button's click handler, the click event will fire for #child-button but will not reach #parent-div. The div's click handler would not be triggered. 
