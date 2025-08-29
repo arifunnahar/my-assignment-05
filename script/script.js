@@ -54,18 +54,19 @@
         return e.target.classList.contains(text);
       }
 
-     function historyCreate(title, number, time) {
-  const div = document.createElement("div");
-  div.className =
-    "flex justify-between items-center bg-gray-100 rounded-lg px-3 py-2";
+     
+    function historyCreate(title, number, time) {
+        const div = document.createElement("div");
+        div.className =
+          "flex justify-between items-center bg-gray-100 rounded-lg px-3 py-2";
 
-  div.innerHTML = `
-    <div>
-      <p class="font-medium text-gray-900 text-xs">${title}</p>
-      <p class="text-gray-600 text-[10px]">${number}</p>
-    </div>
-    <span class="text-[11px] text-gray-900">${time}</span>
-  `;
+        div.innerHTML = `
+          <div>
+            <p class="font-medium text-gray-900 text-xs">${title}</p>
+            <p class="text-gray-600 text-[10px]">${number}</p>
+          </div>
+          <span class="text-[11px] text-gray-900">${time}</span>
+        `;
 
   historyContainer.appendChild(div);
 }
