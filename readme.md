@@ -31,7 +31,7 @@ append(), prepend(), or insertBefore()  to insert it into a specific location wi
 
 
 
-Question No:3. What is **Event Bubbling** and how does it work?
+# Question No:3. What is **Event Bubbling** and how does it work?
 
 Ans: Event bubbling is a type of event propagation in the Document Object Model (DOM) where an event, triggered on an element, first executes on that element and then "bubbles up" through all of its parent elements. This continues until the event reaches the outermost DOM element, or the document object.
 
